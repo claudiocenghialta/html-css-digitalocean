@@ -1,4 +1,8 @@
 /* formattazioni generiche */
+body {
+    color: #031b4e;
+}
+
 header {
     background-color: #FFFFFF;
     height: 65px;
@@ -6,9 +10,26 @@ header {
     padding-bottom: 20px;
 }
 
-section {
-    padding-top: 150px;
-    padding-bottom: 150px;
+.my_font-grey {
+    color: #5f718e;
+}
+
+.my_section-grey {
+    background-color: #f3f5f9;
+}
+
+.my_section-white {
+    background-color: white;
+}
+
+.my_section-high-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.my_section-low-padding {
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 /* formattazione bottoni */
@@ -67,16 +88,17 @@ section {
     color: white;
     padding-top: 250px;
     padding-bottom: 150px;
+    margin-bottom: 0;
 }
 
 /* card per form login dentro jumbotron */
-.my_form_card {
+.my_form-card {
     background-color: white;
     border-radius: 6px;
     text-align: center;
 }
 
-.my_form_title {
+.my_form-title {
     background-color: #f3f5f9;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -98,23 +120,34 @@ section {
     font-size: 16px;
 }
 
-.my_form_footer {
+.my_form-footer {
     padding: 32px;
     margin-left: 0;
     margin-right: 0;
 }
 
-.my_form_footer .col-xs-10 {
+.my_form-footer .col-xs-10 {
     padding-left: 0
 }
 
-.my_form_footer .col-xs-2 {
+.my_form-footer .col-xs-2 {
     padding-left: 0;
     padding-right: 0;
 }
 
-.my_form_terms {
+.my_form-terms {
     font-size: 12px;
     text-align: center;
     margin-top: 12px;
+}
+
+/* fine form */
+/* fine jumbotron */
+/* inizio section loghi clienti */
+#my_section-clients .row {
+    margin-bottom: 25px;
+}
+
+.my_logo-container img {
+    height: 77px;
 }
