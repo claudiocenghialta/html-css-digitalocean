@@ -50,6 +50,21 @@ header {
     width: 100%;
 }
 
+.my_carousel-btn {
+    border-radius: 50%;
+    padding: 3px;
+    border: 2px solid #0068ff;
+    margin: 0 6px;
+}
+
+.my_carousel-btn-active {
+    background-color: #0068ff;
+}
+
+.my_carousel-btn-inactive {
+    background-color: none;
+}
+
 /* inizio navbar */
 .my_navbar {
     height: 65px;
@@ -150,4 +165,109 @@ header {
 
 .my_logo-container img {
     height: 77px;
+}
+
+/* fine sezione looghi clienti */
+/* inizio sezione deploy */
+.my_nav-deploy {
+    text-align: center;
+    border: none;
+    margin-top: 50px;
+}
+
+.my_nav-deploy ul {
+    /* margin-left: auto;
+    margin-right: auto;               da sistemare centratura lista su display xs*/
+}
+
+.my_nav-deploy li {
+    /* margin-left: auto;
+    margin-right: auto;               da sistemare centratura lista su display xs*/
+    border: none;
+    border-bottom: 3px solid #e5e8ed;
+}
+
+.my_nav-deploy li.active, {
+    border: none;
+    border-bottom: 3px solid #0069ff;
+}
+
+.my_nav-deploy li.active a {
+    border: none;
+}
+
+.my_card-deploy {
+    margin-top: 50px;
+}
+
+/* inizio sezione Designed for developers */
+.my_carousel-img {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+/*media query per correzione problema navbar*/
+@media (max-width: 992px) {
+    .navbar-header {
+        float: none;
+    }
+
+    .navbar-left, .navbar-right {
+        float: none !important;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    .navbar-nav {
+        float: none !important;
+        margin-top: 7.5px;
+    }
+
+    .navbar-nav>li {
+        float: none;
+    }
+
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .collapse.in {
+        display: block !important;
+    }
+}
+
+/*media query per spostamento nav section deploy */
+@media screen and (min-width:768px) {
+    .my_nav-deploy li {
+        float: none;
+        text-align: left;
+        border: none;
+        border-left: 3px solid #e5e8ed;
+    }
+
+    .my_nav-deploy li.active {
+        border: none;
+        border-left: 3px solid #0069ff;
+    }
+
+    .my_card-deploy {
+        text-align: left;
+    }
 }
