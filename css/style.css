@@ -14,6 +14,10 @@ header {
     color: #5f718e;
 }
 
+.my_font-lightblue {
+    color: #60779d;
+}
+
 .my_section-grey {
     background-color: #f3f5f9;
 }
@@ -32,6 +36,19 @@ header {
     padding-bottom: 50px;
 }
 
+section a {
+    color: #0069ff;
+}
+
+section a:hover {
+    color: #1633ef;
+    text-decoration: none;
+}
+
+.my_link_arrow a::after {
+    content: ' \003E'
+}
+
 /* formattazione bottoni */
 .my_btn-white {
     background-color: #ffffff;
@@ -48,21 +65,6 @@ header {
 
 .my_btn-w100 {
     width: 100%;
-}
-
-.my_carousel-btn {
-    border-radius: 50%;
-    padding: 3px;
-    border: 2px solid #0068ff;
-    margin: 0 6px;
-}
-
-.my_carousel-btn-active {
-    background-color: #0068ff;
-}
-
-.my_carousel-btn-inactive {
-    background-color: none;
 }
 
 /* inizio navbar */
@@ -202,12 +204,99 @@ header {
 
 /* inizio sezione Designed for developers */
 .my_carousel-img {
-    margin-top: 50px;
     margin-bottom: 30px;
+    position: relative;
 }
 
-/*media query per correzione problema navbar*/
+.my_carousel-arrow {
+    margin-top: 50px;
+    font-size: 40px;
+}
+
+.my_carousel-arrow::before {
+    content: ' \2190';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+}
+
+.my_carousel-arrow::after {
+    content: ' \2192';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(100%, -50%);
+}
+
+[class*="my_carousel-btn"] {
+    border-radius: 50%;
+    padding: 3px;
+    border: 2px solid #0068ff;
+    margin: 0 6px;
+}
+
+.my_carousel-btn-active {
+    background-color: #0068ff;
+}
+
+.my_carousel-btn-inactive {
+    background-color: none;
+}
+
+/* fine  sezione Designed for developers*/
+/* inizio sezione built for businesses */
+.my_for-business-card {
+    margin-top: 50px;
+}
+
+/* fine sezione built for businesses */
+/* inizio sezione worldwide */
+#my_section-worldwide {
+    color: white;
+    background-color: #031b4e;
+    background-image: url("https://images.prismic.io/www-static/bb563ec9-49ef-4ceb-8468-da84f1509fcc_bg-map-solid.svg?auto=compress,format");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.my_country-table {
+    text-align: left;
+}
+
+.my_country-row .row {
+    border-bottom: 1px solid #3f5179;
+    margin-right: 20px;
+    padding: 13px 0;
+}
+
+.my_country-row:last-child .row {
+    border-bottom: none;
+}
+
+.my_country-row-code {
+    font-size: bold;
+}
+
+.my_country-row-city {
+    font-size: lighter;
+    color: #719bb7;
+}
+
+.my_country-row-test {
+    text-align: right;
+}
+
+.my_country-row-test a {
+    color: #00d1cd;
+}
+
+/* fine sezione worldwide */
+/* inizio media query */
 @media (max-width: 992px) {
+
+    /*media query per correzione problema navbar*/
     .navbar-header {
         float: none;
     }
@@ -253,8 +342,9 @@ header {
     }
 }
 
-/*media query per spostamento nav section deploy */
 @media screen and (min-width:768px) {
+
+    /*media query per spostamento nav section deploy */
     .my_nav-deploy li {
         float: none;
         text-align: left;
@@ -269,5 +359,19 @@ header {
 
     .my_card-deploy {
         text-align: left;
+    }
+}
+
+@media screen and (min-width:992px) {
+
+    /* media query per section built for businesses */
+    .my_for-business-card {
+        text-align: left;
+        padding-right: 30px;
+    }
+
+    /* media query per section worldwide */
+    .my_country-row:nth-child(12) .row {
+        border-bottom: 1px solid transparent;
     }
 }
