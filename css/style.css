@@ -293,6 +293,16 @@ section a:hover {
 }
 
 /* fine sezione worldwide */
+/* inizio sezione development */
+blockquote::before {
+    content: '\201C'
+}
+
+blockquote::after {
+    content: '\201E'
+}
+
+/* fine sezione development */
 /* inizio media query */
 @media (max-width: 992px) {
 
