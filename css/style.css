@@ -98,7 +98,8 @@ section a:hover {
 /* fine navbar */
 /* inizio jumbotron */
 .my_jumbotron {
-    background-image: url(https://www.digitalocean.com/static/bg-home-hero-3-bb4b33b77274db09b969f629ad81c4d5.svg);
+    background-color: #0060ff;
+    background-image: url("https://www.digitalocean.com/static/bg-home-hero-3-bb4b33b77274db09b969f629ad81c4d5.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -204,29 +205,9 @@ section a:hover {
 
 /* inizio sezione Designed for developers */
 .my_carousel-img {
+    height: 450px;
     margin-bottom: 30px;
     position: relative;
-}
-
-.my_carousel-arrow {
-    margin-top: 50px;
-    font-size: 40px;
-}
-
-.my_carousel-arrow::before {
-    content: ' \2190';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(-100%, -50%);
-}
-
-.my_carousel-arrow::after {
-    content: ' \2192';
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translate(100%, -50%);
 }
 
 [class*="my_carousel-btn"] {
@@ -294,6 +275,31 @@ section a:hover {
 
 /* fine sezione worldwide */
 /* inizio sezione development */
+#my_section-development .my_carousel {
+    color: #5b6987;
+}
+
+#my_section-development .my_carousel-img {
+    background-color: white;
+    border-radius: 5px;
+    height: 400px;
+    padding: 65px;
+}
+
+#my_section-development .my_carousel-img img {
+    height: 30px;
+    margin: 0 auto 30px;
+}
+
+blockquote {
+    font-size: 24px;
+    line-height: 150%;
+    font-family: 'Sailec-Light', 'Helvetica', sans-serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: none;
+}
+
 blockquote::before {
     content: '\201C'
 }
@@ -302,7 +308,71 @@ blockquote::after {
     content: '\201E'
 }
 
+#my_p_rick {
+    font-size: 16px;
+    line-height: 160%
+}
+
+#my_p_rick-cofounder {
+    font-size: 12px
+}
+
 /* fine sezione development */
+/* inizio sezione get started */
+#my_section_getstarted {
+    background-color: #005dff;
+    background-image: url("https://images.prismic.io/www-static/b4ba92a9-0956-484b-9a3f-68ef4d550fd4_bg-home-cta.svg?auto=compress,format");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+/* fine sezione get started */
+/* inizio footer */
+footer {
+    background-color: #010e28;
+}
+
+footer a {
+    color: #787e8c
+}
+
+.my_footer-top {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #343e53;
+}
+
+.my_footer-title a {
+    color: white;
+    margin-bottom: 10px;
+    font-size: bold;
+}
+
+.my_footer-row:last-child {
+    margin-bottom: 30px;
+}
+
+.my_footer-bottom {
+    margin-top: 30px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.my_footer-bottom div {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.my_footer-bottom a {
+    color: #7f8693;
+}
+
+.my_footer-bottom a {
+    font-size: 20px;
+    margin-right: 18px;
+}
+
+/* fine footer */
 /* inizio media query */
 @media (max-width: 992px) {
 
@@ -383,5 +453,28 @@ blockquote::after {
     /* media query per section worldwide */
     .my_country-row:nth-child(12) .row {
         border-bottom: 1px solid transparent;
+    }
+
+    /* media query per carousel freccine laterali */
+    .my_carousel-arrow {
+        height: 450px;
+        margin-top: 50px;
+        font-size: 40px;
+    }
+
+    .my_carousel-arrow::before {
+        content: ' \2190';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-100%, -50%);
+    }
+
+    .my_carousel-arrow::after {
+        content: ' \2192';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(100%, -50%);
     }
 }
